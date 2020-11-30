@@ -1,0 +1,82 @@
+= Car API
+by 김도연;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+
+[[CarAPI-car]]
+== Car
+Car의 정보를 응답으로 받는다.
+
+[[CarAPI-car-cars]]
+
+=== 1. /cars
+
+모든 car에 대한 정보를 return 해준다.
+
+==== HTTP request
+
+include::{snippets}/cars/http-request.adoc[]
+
+==== HTTP response
+
+include::{snippets}/cars/http-response.adoc[]
+
+operation::carsWithResponse[snippets='response-fields,response-body']
+
+[[CarAPI-car-carsWithBrand]]
+
+=== 2. /cars/{brand}
+
+특정 brand의 car에 대한 정보를 return 해준다.
+
+==== Path Parameter
+
+include::{snippets}/carsWithBrand/path-parameters.adoc[]
+
+==== HTTP request
+
+include::{snippets}/carsWithBrand/http-request.adoc[]
+
+==== HTTP response
+
+include::{snippets}/carsWithBrand/http-response.adoc[]
+
+[[CarAPI-car-carsWithId]]
+
+=== 3. /cars?id=1
+
+특정 id의 car에 대한 정보를 return 해준다.
+
+==== Request Parameter
+
+include::{snippets}/carsWithId/request-parameters.adoc[]
+
+==== HTTP request
+
+include::{snippets}/carsWithId/http-request.adoc[]
+
+==== HTTP response
+
+include::{snippets}/carsWithId/http-response.adoc[]
+
+=== 4. Links
+
+operation::carsWithLinks[]
+
+=== 5. Headers
+
+==== Request & Response Header
+
+operation::carsHeader[snippets='request-headers,response-headers']
+
+==== HTTP request
+
+include::{snippets}/carsHeader/http-request.adoc[]
+
+==== HTTP response
+
+include::{snippets}/carsHeader/http-response.adoc[]
